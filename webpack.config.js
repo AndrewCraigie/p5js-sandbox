@@ -5,7 +5,7 @@ module.exports = {
 
     // Path to entry point. From this file Webpack will begin its work
     entry: {
-        main: './src/scripts/index.js',
+        main: './src/index.js',
     },
     devtool: 'inline-source-map',
     devServer: {
@@ -15,7 +15,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js)$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
             },
@@ -42,7 +42,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['*', '.js']
+        extensions: ['*', '.js', '.jsx']
     },
 
     // Path and filename of result bundle
